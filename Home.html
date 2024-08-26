@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edumy Clone Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+<!-- Top Navigation Bar -->
+<div class="top-nav">
+    <div class="container">
+        <div class="nav-left">
+            <img src="logo.png" alt="logo">
+            <div class="logo">EDUMY</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for the software or skills you want to learn" />
+                <button class="search-button"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="tel:+123456789" class="nav-link">
+                <i class="fa fa-phone"></i> +90 123 456 789
+            </a>
+            <a href="#" class="nav-link">English <i class="fa fa-caret-down"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Main Navigation Bar -->
+<header class="main-nav sticky-nav">
+    <div class="container">
+        <nav>
+            <ul class="main-nav-links">
+                <li class="dropdown">
+                    <a href="#">Home</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Home 1</a></li>
+                        <li><a href="#">Home 2</a></li>
+                        <li><a href="#">Home 3</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Courses</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Course 1</a></li>
+                        <li><a href="#">Course 2</a></li>
+                        <li><a href="#">Course 3</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Events</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Event 1</a></li>
+                        <li><a href="#">Event 2</a></li>
+                        <li><a href="#">Event 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="nav-link">Become an Instructor</a>
+                <a href="#" class="nav-link">Login/Register</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Image Slider with Text -->
+<div class="slider">
+    <div class="slides">
+        <div class="slide active" style="background-image: url('slide1.jpg');">
+            <div class="slider-content text-white text-center">
+                <h1 class="text-5xl font-bold">START INVESTING IN YOU</h1>
+                <p class="mt-4">Technology is bringing a massive wave of evolution on learning things in different ways</p>
+                <button class="mt-6 px-8 py-3 bg-white text-black rounded-lg">Ready to get Started?</button>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('slide2.jpg');">
+            <div class="slider-content text-white text-center">
+                <h1 class="text-5xl font-bold">START INVESTING IN YOU</h1>
+                <p class="mt-4">Technology is bringing a massive wave of evolution on learning things in different ways</p>
+                <button class="mt-6 px-8 py-3 bg-white text-black rounded-lg">Ready to get Started?</button>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('slide3.jpg');">
+            <div class="slider-content text-white text-center">
+                <h1 class="text-5xl font-bold">SELF EDUCATION RESOURCES AND INFOS</h1>
+                <p class="mt-4">Technology is bringing a massive wave of evolution on learning things in different ways</p>
+                <button class="mt-6 px-8 py-3 bg-white text-black rounded-lg">Ready to get Started?</button>
+            </div>
+        </div>
+    </div>
+    <div class="slider-navigation">
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
