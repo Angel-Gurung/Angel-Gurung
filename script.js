@@ -72,3 +72,31 @@ setInterval(() => {
     eventIndex = (eventIndex + 1) % totalEvents;
     updateSlider();
 }, 5000);
+const cardsContainer = document.getElementById('cards-container');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+let currentIndex = 0;
+const cardWidth = 270; // Adjust this to the card width + margin
+
+prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateCardPosition();
+    }
+});
+
+nextButton.addEventListener('click', () => {
+    if (currentIndex < cardsContainer.children.length - 1) {
+        currentIndex++;
+        updateCardPosition();
+    }
+});
+
+function updateCardPosition() {
+    cardsContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+document.getElementById('scrollToTop').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});

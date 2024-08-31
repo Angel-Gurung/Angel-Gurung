@@ -52,7 +52,7 @@ body, h1, p, ul {
     border: none;
     color: white;
     padding: 8px 12px;
-    margin-left: -35px;
+    margin-left: -45px;
     border-radius: 20px;
 }
 .nav-right{
@@ -374,11 +374,11 @@ body, h1, p, ul {
 .event-slider {
     display: flex;
     width: 40%;
-    max-width: 100px; /* Reduced width of the slider */
+    max-width: 100px;
 }
 
 .event-card {
-    min-width: 100%; /* Ensure each card takes up full width within the slider */
+    min-width: 100%;
 }
 
 .event-card-inner {
@@ -406,3 +406,131 @@ body, h1, p, ul {
 .dot.active {
     background-color: #000;
 }
+/* Styling for the cards */
+.card {
+    min-width: 80px;
+    margin: 10px;
+    margin-right: 20px;
+    height: 350px;
+    background-color: white;
+    color: #020202;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 500px;
+    height: 300px;
+}
+
+#cards-container {
+    transition: transform 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.badge {
+    display: none;
+}
+
+.preview {
+    display: none;
+}
+
+.card:hover .badge {
+    display: block;
+}
+
+.card:hover .preview {
+    display: flex;
+}
+
+.testimonial {
+    margin: 50px;
+    max-width: 700px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.testimonial-highlight {
+    position: relative;
+    max-width: 800px;
+    transform: scale(1.1);
+    height: 150px;
+    transition: transform 0.3s ease-in-out;
+    margin-top: -140px;
+    font-size: 20px;
+}
+
+.testimonial:hover, .testimonial:focus {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.arrow {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover .arrow {
+    transform: translateX(4px);
+}
+
+footer {
+    background-color: #000000;
+}
+
+footer h2 {
+    color: white;
+}
+.footer h2 p{
+    color: white;
+ }
+footer a {
+    color: rgb(119, 117, 117);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+footer a:hover {
+    color: #ccc;
+}
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    color: #ccc;
+}
+
+footer a i {
+    font-size: 1.25rem;
+}
+
+
+
+
+
