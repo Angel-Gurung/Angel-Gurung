@@ -2,10 +2,8 @@ body, h1, p, ul {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: Arial, sans-serif;
+
 }
 
 /* Container */
@@ -68,7 +66,7 @@ body {
 /* Main Navigation */
 .main-nav {
     background-color: #222;
-    padding: 25px 0;
+    padding: 20px 0;
     position: relative;
 }
 
@@ -76,7 +74,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 45px;
+    padding: 30px;
 }
 
 .main-nav nav {
@@ -94,7 +92,7 @@ body {
 .main-nav-links li a {
     text-decoration: none;
     color: rgb(186, 183, 183);
-    font-size: 22px;
+    font-size: 19px;
 }
 
 .main-nav-links li a:hover {
@@ -133,7 +131,7 @@ body {
 }
 .nav-actions{
     color: #9e9b9b;
-    margin-left: 650px;
+    margin-left: 450px;
 }
 .nav-actions a{
     padding: 5px;
@@ -191,4 +189,220 @@ body {
     padding: 16px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
+}
+
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 280px; 
+    margin: 0 auto; 
+}
+
+.course-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.badge, .preview {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.badge {
+    top: 15px;
+    left: 15px;
+    background-color: #ff6a00; 
+}
+
+.preview {
+    bottom: 15px;
+    left: 15px;
+}
+
+.course-card:hover .badge, 
+.course-card:hover .preview {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.course-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.instructor {
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.rating {
+    margin-bottom: 15px;
+}
+
+.course-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.price {
+    color: #ff6a00;
+    font-weight: bold;
+}
+
+.achievements-section {
+    position: relative;
+    background: url('slide1.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.container2 {
+    
+    position: relative;
+    z-index: 2;
+}
+
+/* Styling for button */
+.view-courses-button {
+    margin-top: 50px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 10px 30px;
+    color: #3490dc;
+    border: 2px solid #3490dc;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 50px;
+}
+
+.view-courses-button:hover {
+    background-color: #3490dc;
+    color: #fff;
+}
+
+/* Stat items */
+.stat-item i {
+    color: #fff;
+}
+
+.stat-item h3 {
+    margin: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/* For the new event slider */
+.event-slider-section {
+    background-color: #f9f9f9;
+}
+
+.event-slider-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-slider {
+    display: flex;
+    width: 40%;
+    max-width: 100px; /* Reduced width of the slider */
+}
+
+.event-card {
+    min-width: 100%; /* Ensure each card takes up full width within the slider */
+}
+
+.event-card-inner {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-card-inner img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-card-inner:hover img {
+    transform: scale(1.1);
+}
+
+.dot {
+    background-color: #d1d5db;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #000;
 }
